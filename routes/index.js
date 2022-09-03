@@ -36,4 +36,28 @@ router.get('/marca', function(req, res, next) {
   .catch(error=>res.status(400).send(error))
 });
 
+router.get('/users',function(req,res,next){
+  models.usuario.findAll()
+  .then(datos=>{
+    res.json(datos)
+  })
+  .catch(error => res.status(400).send(error))
+})
+
+router.post('/login',function(req,res,next){
+  models.usuario.findOne({
+    where:{
+      nick: req.body.nick, clave: req.body.clave
+    }
+  })
+  .then(datos=>{
+    res.json(
+      {
+        "nick": datos.nick
+      }
+    )
+  })
+  .catch(error => res.status(400).send(error))
+})
+
 module.exports = router;
