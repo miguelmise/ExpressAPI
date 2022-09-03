@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <p>Bienvenido a <%= title %></p>
+    <p>Esta es una API solo de consumo : solo el método HTTP GET, está disponible en los recursos.
+      No se requiere autenticación para acceder a esta API, y todos los recursos están completamente 
+      abiertos y disponibles. </p>
+      <div class="container-fluid">
+        <h3>Mysql (endpoint)</h3>
+        <p><strong>Parametros</strong> ninguno  , <strong>Tipo</strong> : Get    , <strong>Retorno</strong>: Json </p>
+        <p>Servidor Heroku</p>
+        <p>GET: https://proyecto3express.herokuapp.com/modelo </p>
+        <p>GET: https://proyecto3express.herokuapp.com/marca </p>
+    </div>
+    <div class="container-fluid">
+        <h3>Firebase (endpoint)</h3>
+        <p><strong>Parametros</strong> Numero  , <strong>Tipo</strong> : Get    , <strong>Retorno</strong>: Json </p>
+        <p>GET: https://proyecto3bdnorelacional-default-rtdb.firebaseio.com/info_modelos.json</p>
+    </div>
+    <p>Autor: Miguel Mise - 2022 - DAWM</p>
   </body>
 </html>

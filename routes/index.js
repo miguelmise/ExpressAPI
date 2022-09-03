@@ -7,7 +7,7 @@ var models = initModels(sequelize);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Proyecto DAWM Express' });
 });
 
 router.get('/modelo', function(req, res, next) {
